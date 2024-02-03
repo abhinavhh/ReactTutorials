@@ -25,7 +25,7 @@ root.render(
     {/* <Condition /> */}
     {/* <MapC /> */}
     {/* <Compo /> */}
-    <Compon />
+    {/* <Compon /> */}
   </React.StrictMode>
 );
 
