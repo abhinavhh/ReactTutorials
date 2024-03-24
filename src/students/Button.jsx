@@ -1,5 +1,12 @@
-function But(props) {
-    const{children}=props;
-    return <button className="btn btn-primary">{props.children}</button>;
+import React from "react";
+
+function Button(props) {
+    const { children, onClick } = props;
+    return (
+        <button className="btn btn-primary" onClick={onClick}>
+            {children}
+        </button>
+    );
 }
-export default But;
+
+export default Button;
