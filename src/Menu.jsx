@@ -1,28 +1,41 @@
-import { NavLink } from "react-router-dom";
 
+import React from "react";
+import { NavLink } from "../node_modules/react-router-dom";
+import "../node_modules/bootstrap/dist/css/bootstrap.css"
 function Menu() {
-    return(
+    return (
         <nav className="navbar navbar-expand-sm navbar-light bg-light">
-            <div class="container">
+            <div className="container">
                 <NavLink className="navbar-brand" to="/">
-                {/* NavLink is used to avoid the flickering of the website */}
-                {/* <a class="navbar-brand" href="/"> */}
                     Student Catalogue
-                {/* </a> */}
                 </NavLink>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <NavLink className="nav-link active" to="/courses">
-                            {/* <a class="nav-link active" href="/courses" aria-current="page"> */}
+                <div className="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul className="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li className="nav-item">
+                            <NavLink className="nav-link" activeClassName="active" to="/student/SearchStudent">
+                                Search Student
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" activeClassName="active" to="/courses">
                                 Courses
-                                <span class="visually-hidden">(current)</span>
-                            {/* </a> */}
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" activeClassName="active" to="/categories">
+                                Categories
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" activeClassName="active" to="/instructor">
+                                Instructor
                             </NavLink>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav> 
+        </nav>
     );
-}export default Menu;
+}
+
+export default Menu;
