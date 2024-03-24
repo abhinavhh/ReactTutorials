@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-import Root from './Hooks-Context';
-import ValueContext from './ValueContext';
-import HooksEffects from './Hooks-Effect';
-import { useState } from 'react';
-function App() {
-  const [hide,setHide]=useState(false);
-  return (
-    <>
-      <div>
-        <h1>hello world..</h1>
-      </div>
-      <input type="checkbox"  onChange={()=> setHide(!hide)} />
-        Click to Hide
-      {hide ? null:<HooksEffects/>}
-      <ValueContext.Provider value={hide}>
-        <Root />
-      </ValueContext.Provider>
-    </>
-  );
-}export default App;
+// import logo from './logo.svg';
+import React from 'react'
+import './App.css'
+// import Root from './Hooks-Context'
+// import ValueContext from './ValueContext';
+// import HooksEffects from './Hooks-Effect';
+// import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Menu from './Menu'
+import MainPage from './student/MainPage'
+import IndexCourse from './courses/IndexCourses'
+import IndexCateg from './categories/IndexCategory';
+import IndexInstr from './instructor/IndexInstructor';
+import SearchStud from './student/SearchStudent'
+import CreateCourse from './courses/CreateCourses';
+import EditCourse from './courses/EditCourses';
+export default function App() {
+//   const [hide,setHide]=useState(false);
+//   return (
+//     <>
+//       <div>
+//         <h1>hello world..</h1>
+//       </div>
+//       <input type="checkbox"  onChange={()=> setHide(!hide)} />
+//         Click to Hide
+//       {hide ? null:<HooksEffects/>}
+//       <ValueContext.Provider value={hide}>
+//         <Root />
+//       </ValueContext.Provider>
+//     </>
+//   );
+// }export default App;
 
 
 
@@ -240,35 +250,35 @@ function App() {
 
 // for MainPage.jsx
 
-// return(
-//   <>
-//     <Router>
-//       <Menu/>
-//         <div className="container">
-//           <div className="card">
-//             <div className="card-body">
-//               <h5 className="card-title">
-//                 Welcome to my Website
-//               </h5>
-//               <But>Click to Login</But>
-//             </div>
-//           </div>
-//           <Routes>
-//             <Route path="/"element={
-//               <MainPage/>
-
-//               // calling MainPage helps to reduce the code into a single line Intead of creating list one by one
-            
-//             }/>
-//             <Route path="/courses" element={
-//               <IndexCourse/>
-//             }/>
-//           </Routes>
-//         </div>
-//       </Router>
-//     </>
-// );
-// }export default App;
+return (
+  <>
+  <Router>
+      <Menu />
+      <div className="container">
+        <div className="card">
+          <div className="card-body">
+            <h5 className="card-title">
+              Welcome to my Website
+            </h5>
+            {/* Replace <But>Click to Login</But> with <button>Click to Login</button> */}
+            <button className="btn btn-primary">Click to Login</button>
+          </div>
+        </div>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          {/* Uncomment the following if IndexCourse is defined */}
+          <Route path="/courses" element={<IndexCourse />} />
+          <Route path="/categories" element={<IndexCateg />} />
+          <Route path="/instructor" element={<IndexInstr />} />
+          <Route path="/student/SearchStudent" element={<SearchStud />} />
+          <Route path="/courses/CreateCourses" element={<CreateCourse/>}/>
+          <Route path="/courses/EditCourses" element={<EditCourse/>}/>
+        </Routes>
+      </div>
+  </Router>
+  </>
+);
+}
 
 // for route-config.jsx file
 
@@ -287,7 +297,7 @@ function App() {
 //           </div>
 //           <Routes>
 //             {routes.map((route) => (
-//               <Route key={route.path} path={route.path} exact={route.exact} element={
+//               <route key={route.path} path={route.path} exact={route.exact} element={
 //                 <route.component />
 //               }/>
 //             ))}
@@ -297,6 +307,3 @@ function App() {
 //     </>
 // );
 // }export default App;
-
-
-
