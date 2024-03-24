@@ -1,3 +1,3 @@
-import React from "react";
+import React from "react"
 const ValueContext=React.createContext(false);
-export default ValueContext;
+export default ValueContext
