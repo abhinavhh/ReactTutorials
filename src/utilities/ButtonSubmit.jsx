@@ -1,5 +1,4 @@
 import React from 'react';
-import { boolean } from 'yup';
 
 function ButtonSubmit(props) {
     return (
@@ -7,7 +6,7 @@ function ButtonSubmit(props) {
             <button
                 type={props.type}
                 disabled={props.disabled}
-                className="btn btn-primary"
+                className={props.className}
                 onClick={props.onClick}
             >
                 {props.children}
@@ -18,7 +17,8 @@ function ButtonSubmit(props) {
 
 ButtonSubmit.defaultProps = {
     type: "button",
-    disabled:boolean,
+    disabled: false,
+    className: "",
 };
 
 export default ButtonSubmit;
