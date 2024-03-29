@@ -31,7 +31,7 @@ function CourseForm(props) {
                             </ErrorMessage>
                         </div> */}
                         <TextField field="name" displayName="Course Name"/>
-                        <ButtonSubmit disabled={formikProps.isSubmitting}type="submit">Submit</ButtonSubmit>
+                        <ButtonSubmit disabled={formikProps.isSubmitting}type="submit" className="btn btn-primary">Submit</ButtonSubmit>
                         <Link className="btn btn-secondary" to="/courses">Cancel</Link>
                     </Form>
                 )}
