@@ -11,9 +11,11 @@ import MainPage from './student/MainPage'
 import IndexCourse from './courses/IndexCourses'
 import IndexCateg from './categories/IndexCategory';
 import IndexInstr from './instructor/IndexInstructor';
+import CreateInstrn from './instructor/CreateInstructor';
 import SearchStud from './student/SearchStudent'
 import CreateCourse from './courses/CreateCourses';
 import EditCourse from './courses/EditCourses';
+import EditInstrn from './instructor/EditInstructor'
 export default function App() {
 //   const [hide,setHide]=useState(false);
 //   return (
@@ -258,7 +260,7 @@ return (
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">
-              Welcome to my Website
+              Welcome to Techies
             </h5>
             {/* Replace <But>Click to Login</But> with <button>Click to Login</button> */}
             <button className="btn btn-primary">Click to Login</button>
@@ -273,11 +275,13 @@ return (
           <Route path="/student/SearchStudent" element={<SearchStud />} />
           <Route path="/courses/CreateCourses" element={<CreateCourse/>}/>
           <Route path="/courses/EditCourses" element={<EditCourse/>}/>
+          <Route path="/instructor/CreateInstructor" element={<CreateInstrn/>}/>
+          <Route path="/instructor/EditInstructor" element={<EditInstrn/>}/>
         </Routes>
       </div>
   </Router>
   </>
-);
+)
 }
 
 // for route-config.jsx file
