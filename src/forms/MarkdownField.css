@@ -1,0 +1,23 @@
+.form-markdown{
+    display: flex;
+    justify-content: space-around;
+}
+.form-markdown textarea{
+    width: 25em;
+    height: 500px;
+    margin-right: 15px;
+}
+.form-markdown .markdown-container{
+    border:1px dashed black;
+    width:25em;
+    height:500px;
+}
+@media (max-width:990px){
+    .form-markdown{
+        flex-direction: column;
+    }
+    .form-markdown textarea,.form-markdown .markdown-container{
+        width:100%;
+        height: auto;
+    }
+}
