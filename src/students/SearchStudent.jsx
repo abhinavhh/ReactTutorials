@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import ButtonSubmit from '../assets/ButtonSubmit';
+import { Link } from 'react-router-dom';
 
 function SearchStud() {
     const initValues = {
@@ -88,6 +89,7 @@ function SearchStud() {
                                         >
                                             Clear Search
                                         </ButtonSubmit>
+                                        <Link className="btn btn-secondary ms-3" to="/student/CreateStudent">Add Student</Link>
                                     </div>
                                 </div>
                             </Form>
