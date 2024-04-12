@@ -16,6 +16,10 @@ import SearchStud from './student/SearchStudent'
 import CreateCourse from './courses/CreateCourses';
 import EditCourse from './courses/EditCourses';
 import EditInstrn from './instructor/EditInstructor'
+import CreateCateg from './categories/CreateCategory'
+import EditCateg from './categories/EditCategory';
+import CreateStud from './student/CreateStudent';
+import EditStud from './student/EditStudent';
 export default function App() {
 //   const [hide,setHide]=useState(false);
 //   return (
@@ -272,11 +276,15 @@ return (
           <Route path="/courses" element={<IndexCourse />} />
           <Route path="/categories" element={<IndexCateg />} />
           <Route path="/instructor" element={<IndexInstr />} />
-          <Route path="/student/SearchStudent" element={<SearchStud />} />
+          <Route path="/student/CreateStudent" element={<CreateStud/>}/>
+          <Route path="/student/SearchStudent" element={<SearchStud />}/>
+          <Route path="/student/EditStudent" element={<EditStud/>}/>
           <Route path="/courses/CreateCourses" element={<CreateCourse/>}/>
           <Route path="/courses/EditCourses" element={<EditCourse/>}/>
           <Route path="/instructor/CreateInstructor" element={<CreateInstrn/>}/>
           <Route path="/instructor/EditInstructor" element={<EditInstrn/>}/>
+          <Route path="/categories/CreateCategory" element={<CreateCateg/>}/>
+          <Route path="/categories/EditCategory" element={<EditCateg/>}/>
         </Routes>
       </div>
   </Router>
