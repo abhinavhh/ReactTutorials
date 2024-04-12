@@ -2,9 +2,9 @@ import IndexCourse from "./courses/IndexCourses";
 import CreateCourse from "./courses/CreateCourses";
 import EditCourse from "./courses/EditCourses";
 
-import Indexcateg from "./categories/IndexCategory";
-import Createcateg from "./categories/CreateCategory";
-import Editcateg from "./categories/EditCategory";
+import IndexCateg from "./categories/IndexCategory";
+import CreateCateg from "./categories/CreateCategory";
+import EditCateg from "./categories/EditCategory";
 
 import IndexInstr from "./instructor/IndexInstructor";
 import CreateInstr from "./instructor/CreateInstructor";
@@ -22,9 +22,9 @@ const routes = [
   { path: '/courses/create', component: CreateCourse },
   { path: '/courses/edit/:id(\\id+)', component: EditCourse },
 
-  { path: '/categories', component: Indexcateg, exact: true },
-  { path: '/categories/create', component: Createcateg },
-  { path: '/categories/edit/:id(\\id+)', component: Editcateg },
+  { path: '/categories', component: IndexCateg, exact: true },
+  { path: '/categories/create', component: CreateCateg },
+  { path: '/categories/edit/:id(\\id+)', component: EditCateg },
 
   { path: '/instructor', component: IndexInstr, exact: true },
   { path: '/instructor/create', component: CreateInstr },
