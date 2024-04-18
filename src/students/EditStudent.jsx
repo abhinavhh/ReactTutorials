@@ -1,6 +1,19 @@
+import { useParams } from "react-router-dom";
 import StudentForm from "./StudentForm";
 
 function EditStud() {
+    const {id} =useParams();
+    const unSelectedCategories = [
+        {id: 1, name: "Basics"},
+        {id: 2, name: "Intermediate"},
+    ];
+    const selectedCategories = [{id:3,name:"Advanced"}];
+
+    const unSelectedCourses = [
+        {id: 1, name: "Java Essentials"},
+        {id: 2, name: "Mobile Android Development"},
+    ];
+    const selectedCourses = [{id:3,name:"Full Stack Development"}];
     return(
         <>
             <div className="card">
@@ -20,6 +33,10 @@ function EditStud() {
                             alert(JSON.stringify(id,null,2));
                             alert(JSON.stringify(values,null,2));
                         }}
+                        unSelectedCourses={unSelectedCourses}
+                        selectedCourses={selectedCourses}
+                        unSelectedCategories={unSelectedCategories}
+                        selectedCategories={selectedCategories}
                     />
                 </div>
             </div>
