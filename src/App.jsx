@@ -287,6 +287,11 @@ return (
           <Route path="/categories/EditCategory" element={<EditCateg/>}/>
         </Routes>
       </div>
+      <footer className="bd-footer py-5 mt-5 bg-light">
+        <div className="container">
+          Student Catalogue @ {new Date().getFullYear().toString()}
+        </div>
+      </footer>
   </Router>
   </>
 )
