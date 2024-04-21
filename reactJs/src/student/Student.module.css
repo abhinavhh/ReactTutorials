@@ -1,0 +1,25 @@
+.main{
+    display:flex;
+    margin:0;
+    text-align: center;
+    background-color: black;
+}
+.main p{
+    font-size: 15px;
+}
+.conatiner{
+    display: flex;
+}
+.main img{
+    width :50%;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.main a{
+    color:rgb(240, 240, 237);
+    text-decoration: none;
+    font-size: 2rem;
+}
+.main a:hover{
+    color:red;
+}

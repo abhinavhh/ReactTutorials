@@ -1,0 +1,17 @@
+.mainmain{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+.mainmain a{
+    text-decoration: none;
+    color:blueviolet;
+    font-size: 2rem;
+    margin-right: 1em;
+}
+@media(max-width:725px){
+    .mainmain{
+        flex-direction:column;
+    }
+}
